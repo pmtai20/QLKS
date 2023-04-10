@@ -1,4 +1,4 @@
-﻿
+
 namespace QLKS
 {
     partial class MainForm
@@ -39,6 +39,7 @@ namespace QLKS
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             SuspendLayout();
+            tabPage1 = new System.Windows.Forms.TabPage();
             // 
             // tabControl1
             // 
@@ -51,6 +52,7 @@ namespace QLKS
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new System.Drawing.Size(845, 440);
             tabControl1.TabIndex = 0;
+            tabControl1.Controls.Add(tabPage1);
             // 
             // tabPage2
             // 
@@ -63,6 +65,14 @@ namespace QLKS
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Phiếu đặt phòng";
             tabPage2.UseVisualStyleBackColor = true;
+            tabPage1.Location = new System.Drawing.Point(4, 34);
+            tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            tabPage1.Size = new System.Drawing.Size(1200, 696);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "example tab";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // TimPhongControl
             // 
@@ -94,6 +104,21 @@ namespace QLKS
             tabPage4.Text = "Tour";
             tabPage4.UseVisualStyleBackColor = true;
             // 
+<<<<<<<
+
+=======
+            // tabPage5
+            // 
+            tabPage5.Location = new System.Drawing.Point(4, 34);
+            tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            tabPage5.Size = new System.Drawing.Size(1200, 696);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Thanh toán";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+>>>>>>>
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -102,16 +127,15 @@ namespace QLKS
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(907, 484);
+            ClientSize = new System.Drawing.Size(1238, 764);
             Controls.Add(tabControl1);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "MainForm";
             Text = "Quan Ly Khach San";
             Load += MainForm_Load;
             tabControl1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -123,6 +147,7 @@ namespace QLKS
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private UserControls.TimPhongControl TimPhongControl;
+        private DatPhongControl DatPhongControl;
     }
 }
 
