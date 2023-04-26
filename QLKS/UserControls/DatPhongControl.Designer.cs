@@ -1,5 +1,10 @@
 ﻿
-namespace QLKS
+using System.Drawing.Printing;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace QLKS.UserControls
 {
     partial class DatPhongControl
     {

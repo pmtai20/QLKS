@@ -32,14 +32,15 @@ namespace QLKS
             components = new System.ComponentModel.Container();
             tabControl1 = new System.Windows.Forms.TabControl();
             tabPage2 = new System.Windows.Forms.TabPage();
+            tabPage1 = new System.Windows.Forms.TabPage();
             TimPhongControl = new UserControls.TimPhongControl();
+            DatPhongControl = new UserControls.DatPhongControl();
             tabPage3 = new System.Windows.Forms.TabPage();
             tabPage4 = new System.Windows.Forms.TabPage();
             contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(components);
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             SuspendLayout();
-            tabPage1 = new System.Windows.Forms.TabPage();
             // 
             // tabControl1
             // 
@@ -53,7 +54,19 @@ namespace QLKS
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new System.Drawing.Size(1055, 710);
             tabControl1.TabIndex = 0;
-            tabControl1.Controls.Add(tabPage1);
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(DatPhongControl);
+            tabPage1.Location = new System.Drawing.Point(4, 34);
+            tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tabPage1.Size = new System.Drawing.Size(1047, 682);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Đặt phòng";
+            tabPage1.UseVisualStyleBackColor = true;
+            DatPhongControl.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // tabPage2
             // 
@@ -64,17 +77,8 @@ namespace QLKS
             tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage2.Size = new System.Drawing.Size(837, 412);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Phiếu đặt phòng";
+            tabPage2.Text = "Tìm phòng";
             tabPage2.UseVisualStyleBackColor = true;
-            tabPage1.Location = new System.Drawing.Point(4, 34);
-            tabPage1.Margin = new System.Windows.Forms.Padding(4);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage1.Size = new System.Drawing.Size(1047, 682);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "example tab";
-            tabPage1.UseVisualStyleBackColor = true;
-            tabPage1.Click += tabPage1_Click;
             // 
             // TimPhongControl
             // 
@@ -106,21 +110,6 @@ namespace QLKS
             tabPage4.Text = "Tour";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-<<<<<<<
-
-=======
-            // tabPage5
-            // 
-            tabPage5.Location = new System.Drawing.Point(4, 24);
-            tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage5.Size = new System.Drawing.Size(838, 412);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Thanh toán";
-            tabPage5.UseVisualStyleBackColor = true;
-            // 
->>>>>>>
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -150,7 +139,7 @@ namespace QLKS
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private UserControls.TimPhongControl TimPhongControl;
-        private DatPhongControl DatPhongControl;
+        private UserControls.DatPhongControl DatPhongControl;
     }
 }
 

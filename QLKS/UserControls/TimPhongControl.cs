@@ -20,11 +20,7 @@ namespace QLKS.UserControls
 
         private void TimPhongControl_Load(object sender, EventArgs e)
         {
-<<<<<<< refs/remotes/origin/master:QLKS/UserControls/TimPhongControl.cs
-
-=======
             LoadData();
->>>>>>> Create UI ControlUser DP, PDP:QLKS/UserControls/DatPhongControl.cs
         }
 
         public void LoadData()
@@ -34,7 +30,7 @@ namespace QLKS.UserControls
             DataTable dataTable = DataAccess.ExecuteQuery(query);
 
             // Bind the DataTable to the DataGridView
-            dvgDSPT.DataSource = dataTable;
+            dataGridView1.DataSource = dataTable;
         }
 
         private void button2_Click(object sender, EventArgs e)
