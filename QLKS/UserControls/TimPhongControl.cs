@@ -20,7 +20,7 @@ namespace QLKS.UserControls
 
         private void TimPhongControl_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         public void LoadData()

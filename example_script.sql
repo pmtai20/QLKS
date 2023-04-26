@@ -25,3 +25,10 @@ VALUES
   (6, '302', 'Deluxe', 'King', 2, 129.99);
 
   select * from room
+
+  INSERT INTO Room (RoomId, RoomNumber, RoomType, BedType, MaxOccupancy, PricePerNight)
+VALUES
+  (7, '306', 'Deluxe', 'King', 2, 129.99),
+  (8, '307', 'Deluxe', 'King', 2, 129.99),
+  (9, '308', 'Deluxe', 'King', 2, 129.99),
+  (10, '311', 'Deluxe', 'King', 2, 129.99);
