@@ -43,6 +43,7 @@ namespace QLKS
             // 
             // tabControl1
             // 
+            tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
@@ -50,7 +51,7 @@ namespace QLKS
             tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(845, 440);
+            tabControl1.Size = new System.Drawing.Size(1055, 710);
             tabControl1.TabIndex = 0;
             tabControl1.Controls.Add(tabPage1);
             // 
@@ -68,11 +69,12 @@ namespace QLKS
             tabPage1.Location = new System.Drawing.Point(4, 34);
             tabPage1.Margin = new System.Windows.Forms.Padding(4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            tabPage1.Size = new System.Drawing.Size(1200, 696);
+            tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tabPage1.Size = new System.Drawing.Size(1047, 682);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "example tab";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // TimPhongControl
             // 
@@ -88,7 +90,7 @@ namespace QLKS
             tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage3.Size = new System.Drawing.Size(837, 412);
+            tabPage3.Size = new System.Drawing.Size(838, 412);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Dịch vụ";
             tabPage3.UseVisualStyleBackColor = true;
@@ -99,7 +101,7 @@ namespace QLKS
             tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage4.Size = new System.Drawing.Size(837, 412);
+            tabPage4.Size = new System.Drawing.Size(838, 412);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Tour";
             tabPage4.UseVisualStyleBackColor = true;
@@ -109,11 +111,11 @@ namespace QLKS
 =======
             // tabPage5
             // 
-            tabPage5.Location = new System.Drawing.Point(4, 34);
-            tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            tabPage5.Location = new System.Drawing.Point(4, 24);
+            tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            tabPage5.Size = new System.Drawing.Size(1200, 696);
+            tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tabPage5.Size = new System.Drawing.Size(838, 412);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Thanh toán";
             tabPage5.UseVisualStyleBackColor = true;
@@ -127,11 +129,11 @@ namespace QLKS
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1238, 764);
+            ClientSize = new System.Drawing.Size(1067, 724);
             Controls.Add(tabControl1);
-            Margin = new System.Windows.Forms.Padding(4);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Quan Ly Khach San";
             Load += MainForm_Load;
@@ -142,6 +144,7 @@ namespace QLKS
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
