@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace QLKS.Forms
 {
-    public partial class ExampleForm : Form
+    public partial class CheckInForm : Form
     {
-        public ExampleForm()
+        public CheckInForm()
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ThemDoanKhachForm ThemDoanKhachForm = new ThemDoanKhachForm();
+
+            ThemDoanKhachForm.Show();
+        }
+
     }
 }

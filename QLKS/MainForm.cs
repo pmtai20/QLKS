@@ -13,9 +13,8 @@ namespace QLKS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            DatPhongControl.LoadData();
+            //DatPhongControl.LoadData();
+            TimPhongControl.LoadData();
         }
-
-
     }
 }
