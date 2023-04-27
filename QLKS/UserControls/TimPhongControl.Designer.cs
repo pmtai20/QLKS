@@ -167,6 +167,7 @@
             button1.TabIndex = 24;
             button1.Text = "Check Out";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 

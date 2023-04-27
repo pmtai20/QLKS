@@ -32,6 +32,13 @@ namespace QLKS.UserControls
             // Bind the DataTable to the DataGridView
             dataGridView1.DataSource = dataTable;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheckOutForm checkoutform = new CheckOutForm();
+            checkoutform.LoadData();
+            checkoutform.ShowDialog();
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
