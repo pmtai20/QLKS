@@ -1,12 +1,32 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace QLKS
 {
     public static class DataAccess
     {
-        private static string connectionString = "Server=localhost;Database=testdb;Trusted_Connection=True;";
+        private static string connectionString = "Server=localhost;Database=QLKS;Trusted_Connection=True;";
+
+
+        public static void LoadData()
+        {
+
+            MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (mainForm != null && !mainForm.IsDisposed && mainForm.IsHandleCreated)
+            {
+                mainForm.LoadData();
+            }
+            else
+            {
+                mainForm = new MainForm();
+                mainForm.LoadData();
+                mainForm.Show();
+            }
+
+        }
 
         // use to execute select
         public static DataTable ExecuteQuery(string query)

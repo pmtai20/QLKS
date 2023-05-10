@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             dataGridView1 = new System.Windows.Forms.DataGridView();
+            TENKHCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label1 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
-            TENKHCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,6 +48,20 @@
             dataGridView1.Size = new System.Drawing.Size(653, 296);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // TENKHCN
+            // 
+            TENKHCN.HeaderText = "TENKHCN";
+            TENKHCN.MinimumWidth = 6;
+            TENKHCN.Name = "TENKHCN";
+            TENKHCN.Width = 300;
+            // 
+            // CMND
+            // 
+            CMND.HeaderText = "CMND";
+            CMND.MinimumWidth = 6;
+            CMND.Name = "CMND";
+            CMND.Width = 300;
             // 
             // label1
             // 
@@ -67,6 +81,7 @@
             button1.TabIndex = 2;
             button1.Text = "Xác nhận";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -76,20 +91,7 @@
             button2.TabIndex = 3;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // TENKHCN
-            // 
-            TENKHCN.HeaderText = "TENKHCN";
-            TENKHCN.MinimumWidth = 6;
-            TENKHCN.Name = "TENKHCN";
-            TENKHCN.Width = 300;
-            // 
-            // CMND
-            // 
-            CMND.HeaderText = "CMND";
-            CMND.MinimumWidth = 6;
-            CMND.Name = "CMND";
-            CMND.Width = 300;
+            button2.Click += button2_Click;
             // 
             // ThemDoanKhachForm
             // 

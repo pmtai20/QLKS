@@ -11,6 +11,11 @@ namespace QLKS
             InitializeComponent();
         }
 
+        public void LoadData()
+        {
+            TimPhongControl.LoadData();
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
         }

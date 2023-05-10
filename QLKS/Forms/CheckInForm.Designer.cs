@@ -71,6 +71,7 @@
             button2.TabIndex = 37;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -81,6 +82,7 @@
             button1.TabIndex = 36;
             button1.Text = "Check In";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label8
             // 
@@ -104,7 +106,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(215, 108);
+            label6.Location = new System.Drawing.Point(230, 108);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(77, 20);
             label6.TabIndex = 33;
@@ -142,7 +144,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(215, 51);
+            label2.Location = new System.Drawing.Point(230, 51);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(35, 20);
             label2.TabIndex = 29;
@@ -154,9 +156,9 @@
             label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(105, 51);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(80, 20);
+            label1.Size = new System.Drawing.Size(107, 20);
             label1.TabIndex = 28;
-            label1.Text = "Mã phòng";
+            label1.Text = "Mã đặt phòng";
             // 
             // CheckInForm
             // 
@@ -178,6 +180,7 @@
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "CheckInForm";
             Text = "CheckInForm";
+            Load += CheckInForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

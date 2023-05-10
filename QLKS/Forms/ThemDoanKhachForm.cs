@@ -26,5 +26,15 @@ namespace QLKS.Forms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Them thanh cong!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();    
+        }
     }
 }
