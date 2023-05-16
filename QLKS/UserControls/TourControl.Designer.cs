@@ -35,8 +35,7 @@
             NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             KetQua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Xem = new System.Windows.Forms.DataGridViewButtonColumn();
-            button1 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
+            btn_Tao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -95,33 +94,25 @@
             Xem.Text = "Xem";
             Xem.Width = 150;
             // 
-            // button1
+            // btn_Tao
             // 
-            button1.Location = new System.Drawing.Point(49, 34);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(112, 34);
-            button1.TabIndex = 1;
-            button1.Text = "Tạo mới";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new System.Drawing.Point(194, 33);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(112, 34);
-            button2.TabIndex = 2;
-            button2.Text = "Xem";
-            button2.UseVisualStyleBackColor = true;
+            btn_Tao.Location = new System.Drawing.Point(49, 34);
+            btn_Tao.Name = "btn_Tao";
+            btn_Tao.Size = new System.Drawing.Size(112, 34);
+            btn_Tao.TabIndex = 1;
+            btn_Tao.Text = "Tạo mới";
+            btn_Tao.UseVisualStyleBackColor = true;
+            btn_Tao.Click += btn_Tao_Clicked;
             // 
             // TourControl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_Tao);
             Controls.Add(dataGridView1);
             Name = "TourControl";
             Size = new System.Drawing.Size(1035, 687);
+            Load += TourControl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -135,7 +126,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDK;
         private System.Windows.Forms.DataGridViewTextBoxColumn KetQua;
         private System.Windows.Forms.DataGridViewButtonColumn Xem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Tao;
     }
 }

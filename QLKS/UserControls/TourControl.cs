@@ -21,5 +21,17 @@ namespace QLKS.UserControls
         {
 
         }
+
+        private void TourControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Tao_Clicked(object sender, EventArgs e)
+        {
+            QLKS.Forms.DangKyTour DKT = new QLKS.Forms.DangKyTour();
+            Application.OpenForms["MainForm"].Hide();
+            DKT.Show();
+        }
     }
 }
