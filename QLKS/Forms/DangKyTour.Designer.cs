@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             label1 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
+            txt_MaTour = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             label3 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
-            comboBox1 = new System.Windows.Forms.ComboBox();
+            txt_SoLuong = new System.Windows.Forms.TextBox();
+            cbb_DuaDon = new System.Windows.Forms.ComboBox();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
-            textBox3 = new System.Windows.Forms.TextBox();
+            txt_YeuCau = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
-            comboBox2 = new System.Windows.Forms.ComboBox();
+            cbb_KetQua = new System.Windows.Forms.ComboBox();
             label7 = new System.Windows.Forms.Label();
-            textBox4 = new System.Windows.Forms.TextBox();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
+            txt_TongTien = new System.Windows.Forms.TextBox();
+            gv_ThamGia = new System.Windows.Forms.DataGridView();
             stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             cmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label8 = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btn_ChinhSua = new System.Windows.Forms.Button();
+            btn_XacNhan = new System.Windows.Forms.Button();
+            btn_TroVe = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)gv_ThamGia).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -62,12 +63,12 @@
             label1.TabIndex = 0;
             label1.Text = "Mã Tour";
             // 
-            // textBox1
+            // txt_MaTour
             // 
-            textBox1.Location = new System.Drawing.Point(137, 59);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(150, 31);
-            textBox1.TabIndex = 1;
+            txt_MaTour.Location = new System.Drawing.Point(137, 59);
+            txt_MaTour.Name = "txt_MaTour";
+            txt_MaTour.Size = new System.Drawing.Size(150, 31);
+            txt_MaTour.TabIndex = 1;
             // 
             // label2
             // 
@@ -94,20 +95,20 @@
             label3.TabIndex = 4;
             label3.Text = "Số lượng";
             // 
-            // textBox2
+            // txt_SoLuong
             // 
-            textBox2.Location = new System.Drawing.Point(137, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(150, 31);
-            textBox2.TabIndex = 5;
+            txt_SoLuong.Location = new System.Drawing.Point(137, 107);
+            txt_SoLuong.Name = "txt_SoLuong";
+            txt_SoLuong.Size = new System.Drawing.Size(150, 31);
+            txt_SoLuong.TabIndex = 5;
             // 
-            // comboBox1
+            // cbb_DuaDon
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new System.Drawing.Point(542, 107);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(182, 33);
-            comboBox1.TabIndex = 6;
+            cbb_DuaDon.FormattingEnabled = true;
+            cbb_DuaDon.Location = new System.Drawing.Point(542, 107);
+            cbb_DuaDon.Name = "cbb_DuaDon";
+            cbb_DuaDon.Size = new System.Drawing.Size(182, 33);
+            cbb_DuaDon.TabIndex = 6;
             // 
             // label4
             // 
@@ -127,13 +128,13 @@
             label5.TabIndex = 8;
             label5.Text = "Yêu cầu đặc biệt";
             // 
-            // textBox3
+            // txt_YeuCau
             // 
-            textBox3.Location = new System.Drawing.Point(203, 155);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(639, 77);
-            textBox3.TabIndex = 9;
+            txt_YeuCau.Location = new System.Drawing.Point(203, 155);
+            txt_YeuCau.Multiline = true;
+            txt_YeuCau.Name = "txt_YeuCau";
+            txt_YeuCau.Size = new System.Drawing.Size(639, 77);
+            txt_YeuCau.TabIndex = 9;
             // 
             // label6
             // 
@@ -144,13 +145,13 @@
             label6.TabIndex = 10;
             label6.Text = "Kết quả";
             // 
-            // comboBox2
+            // cbb_KetQua
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new System.Drawing.Point(660, 254);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(182, 33);
-            comboBox2.TabIndex = 11;
+            cbb_KetQua.FormattingEnabled = true;
+            cbb_KetQua.Location = new System.Drawing.Point(660, 254);
+            cbb_KetQua.Name = "cbb_KetQua";
+            cbb_KetQua.Size = new System.Drawing.Size(182, 33);
+            cbb_KetQua.TabIndex = 11;
             // 
             // label7
             // 
@@ -161,23 +162,23 @@
             label7.TabIndex = 12;
             label7.Text = "Tổng tiền";
             // 
-            // textBox4
+            // txt_TongTien
             // 
-            textBox4.Location = new System.Drawing.Point(137, 248);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(150, 31);
-            textBox4.TabIndex = 13;
+            txt_TongTien.Location = new System.Drawing.Point(137, 248);
+            txt_TongTien.Name = "txt_TongTien";
+            txt_TongTien.Size = new System.Drawing.Size(150, 31);
+            txt_TongTien.TabIndex = 13;
             // 
-            // dataGridView1
+            // gv_ThamGia
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { stt, tenkh, sdt, cmnd });
-            dataGridView1.Location = new System.Drawing.Point(48, 369);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new System.Drawing.Size(738, 225);
-            dataGridView1.TabIndex = 14;
+            gv_ThamGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gv_ThamGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { stt, tenkh, sdt, cmnd });
+            gv_ThamGia.Location = new System.Drawing.Point(48, 369);
+            gv_ThamGia.Name = "gv_ThamGia";
+            gv_ThamGia.RowHeadersWidth = 62;
+            gv_ThamGia.RowTemplate.Height = 33;
+            gv_ThamGia.Size = new System.Drawing.Size(738, 225);
+            gv_ThamGia.TabIndex = 14;
             // 
             // stt
             // 
@@ -188,6 +189,7 @@
             // 
             // tenkh
             // 
+            tenkh.DataPropertyName = "TENKHCN";
             tenkh.HeaderText = "Họ Tên";
             tenkh.MinimumWidth = 8;
             tenkh.Name = "tenkh";
@@ -195,6 +197,7 @@
             // 
             // sdt
             // 
+            sdt.DataPropertyName = "SDT";
             sdt.HeaderText = "SĐT";
             sdt.MinimumWidth = 8;
             sdt.Name = "sdt";
@@ -202,6 +205,7 @@
             // 
             // cmnd
             // 
+            cmnd.DataPropertyName = "CMND";
             cmnd.HeaderText = "CMND";
             cmnd.MinimumWidth = 8;
             cmnd.Name = "cmnd";
@@ -216,50 +220,64 @@
             label8.TabIndex = 15;
             label8.Text = "Thông tin người tham gia";
             // 
-            // button1
+            // btn_ChinhSua
             // 
-            button1.Location = new System.Drawing.Point(295, 325);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(112, 34);
-            button1.TabIndex = 16;
-            button1.Text = "Chỉnh sửa";
-            button1.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Location = new System.Drawing.Point(295, 325);
+            btn_ChinhSua.Name = "btn_ChinhSua";
+            btn_ChinhSua.Size = new System.Drawing.Size(112, 34);
+            btn_ChinhSua.TabIndex = 16;
+            btn_ChinhSua.Text = "Chỉnh sửa";
+            btn_ChinhSua.UseVisualStyleBackColor = true;
+            btn_ChinhSua.Click += btn_ChinhSua_Clicked;
             // 
-            // button2
+            // btn_XacNhan
             // 
-            button2.Location = new System.Drawing.Point(851, 531);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(135, 63);
-            button2.TabIndex = 17;
-            button2.Text = "Xác nhận";
-            button2.UseVisualStyleBackColor = true;
+            btn_XacNhan.Location = new System.Drawing.Point(851, 531);
+            btn_XacNhan.Name = "btn_XacNhan";
+            btn_XacNhan.Size = new System.Drawing.Size(135, 63);
+            btn_XacNhan.TabIndex = 17;
+            btn_XacNhan.Text = "Xác nhận";
+            btn_XacNhan.UseVisualStyleBackColor = true;
+            // 
+            // btn_TroVe
+            // 
+            btn_TroVe.Location = new System.Drawing.Point(43, 12);
+            btn_TroVe.Name = "btn_TroVe";
+            btn_TroVe.Size = new System.Drawing.Size(112, 34);
+            btn_TroVe.TabIndex = 18;
+            btn_TroVe.Text = "Trở Về";
+            btn_TroVe.UseVisualStyleBackColor = true;
+            btn_TroVe.Click += btn_TroVe_Clicked;
             // 
             // DangKyTour
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1033, 636);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_TroVe);
+            Controls.Add(btn_XacNhan);
+            Controls.Add(btn_ChinhSua);
             Controls.Add(label8);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox4);
+            Controls.Add(gv_ThamGia);
+            Controls.Add(txt_TongTien);
             Controls.Add(label7);
-            Controls.Add(comboBox2);
+            Controls.Add(cbb_KetQua);
             Controls.Add(label6);
-            Controls.Add(textBox3);
+            Controls.Add(txt_YeuCau);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
+            Controls.Add(cbb_DuaDon);
+            Controls.Add(txt_SoLuong);
             Controls.Add(label3);
             Controls.Add(dateTimePicker1);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txt_MaTour);
             Controls.Add(label1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             Name = "DangKyTour";
             Text = "DangKyTour";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += DangKyTour_Load;
+            ((System.ComponentModel.ISupportInitialize)gv_ThamGia).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -267,26 +285,28 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaTour;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_SoLuong;
+        private System.Windows.Forms.ComboBox cbb_DuaDon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_YeuCau;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbb_KetQua;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_TongTien;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_TroVe;
+        private System.Windows.Forms.Button btn_XacNhan;
+        private System.Windows.Forms.Button btn_ChinhSua;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenkh;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView gv_ThamGia;
     }
 }

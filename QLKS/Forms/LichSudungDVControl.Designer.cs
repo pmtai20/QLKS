@@ -28,64 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button4 = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
+            btn_Sua = new System.Windows.Forms.Button();
+            btn_Xoa = new System.Windows.Forms.Button();
+            btn_Them = new System.Windows.Forms.Button();
+            gv_LichSuDung = new System.Windows.Forms.DataGridView();
+            sttdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TGSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            SOLUONGTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            NGAYDANGKY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            YEUCAUDACBIET = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label4 = new System.Windows.Forms.Label();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            thoigiansudung = new System.Windows.Forms.DateTimePicker();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
+            txt_SoNguoi = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
-            sttdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            giamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_ChuThich = new System.Windows.Forms.TextBox();
+            btn_TroVe = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)gv_LichSuDung).BeginInit();
             SuspendLayout();
             // 
-            // button4
+            // btn_Sua
             // 
-            button4.Location = new System.Drawing.Point(813, 331);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(112, 34);
-            button4.TabIndex = 21;
-            button4.Text = "Sửa";
-            button4.UseVisualStyleBackColor = true;
+            btn_Sua.Location = new System.Drawing.Point(172, 230);
+            btn_Sua.Name = "btn_Sua";
+            btn_Sua.Size = new System.Drawing.Size(112, 34);
+            btn_Sua.TabIndex = 21;
+            btn_Sua.Text = "Sửa";
+            btn_Sua.UseVisualStyleBackColor = true;
+            btn_Sua.Click += btn_Sua_Clicked;
             // 
-            // button3
+            // btn_Xoa
             // 
-            button3.Location = new System.Drawing.Point(813, 423);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(112, 34);
-            button3.TabIndex = 20;
-            button3.Text = "Xóa";
-            button3.UseVisualStyleBackColor = true;
+            btn_Xoa.Location = new System.Drawing.Point(318, 230);
+            btn_Xoa.Name = "btn_Xoa";
+            btn_Xoa.Size = new System.Drawing.Size(112, 34);
+            btn_Xoa.TabIndex = 20;
+            btn_Xoa.Text = "Xóa";
+            btn_Xoa.UseVisualStyleBackColor = true;
+            btn_Xoa.Click += btn_Xoa_Clicked;
             // 
-            // button2
+            // btn_Them
             // 
-            button2.Location = new System.Drawing.Point(561, 131);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(138, 51);
-            button2.TabIndex = 19;
-            button2.Text = "Thêm";
-            button2.UseVisualStyleBackColor = true;
+            btn_Them.Location = new System.Drawing.Point(561, 171);
+            btn_Them.Name = "btn_Them";
+            btn_Them.Size = new System.Drawing.Size(138, 51);
+            btn_Them.TabIndex = 19;
+            btn_Them.Text = "Thêm";
+            btn_Them.UseVisualStyleBackColor = true;
+            btn_Them.Click += btn_Them_Clicked;
             // 
-            // dataGridView1
+            // gv_LichSuDung
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { sttdv, tendv, soluong, gia, giamgia, Column1 });
-            dataGridView1.Location = new System.Drawing.Point(30, 277);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new System.Drawing.Size(748, 248);
-            dataGridView1.TabIndex = 18;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            gv_LichSuDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gv_LichSuDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { sttdv, TGSD, SOLUONGTG, NGAYDANGKY, YEUCAUDACBIET });
+            gv_LichSuDung.Location = new System.Drawing.Point(30, 277);
+            gv_LichSuDung.Name = "gv_LichSuDung";
+            gv_LichSuDung.RowHeadersWidth = 62;
+            gv_LichSuDung.RowTemplate.Height = 33;
+            gv_LichSuDung.Size = new System.Drawing.Size(889, 248);
+            gv_LichSuDung.TabIndex = 18;
+            gv_LichSuDung.CellContentClick += dataGridView1_CellContentClick;
+            gv_LichSuDung.CellValueChanged += gv_LichSuDung_CellValuedChanged;
+            // 
+            // sttdv
+            // 
+            sttdv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            sttdv.HeaderText = "STT";
+            sttdv.MinimumWidth = 8;
+            sttdv.Name = "sttdv";
+            sttdv.Width = 50;
+            // 
+            // TGSD
+            // 
+            TGSD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            TGSD.DataPropertyName = "THOIGIANSUDUNG";
+            TGSD.HeaderText = "Thời gian sử dụng";
+            TGSD.MinimumWidth = 8;
+            TGSD.Name = "TGSD";
+            TGSD.Width = 138;
+            // 
+            // SOLUONGTG
+            // 
+            SOLUONGTG.DataPropertyName = "SOLUONG";
+            SOLUONGTG.HeaderText = "Số người";
+            SOLUONGTG.MinimumWidth = 8;
+            SOLUONGTG.Name = "SOLUONGTG";
+            SOLUONGTG.Width = 80;
+            // 
+            // NGAYDANGKY
+            // 
+            NGAYDANGKY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            NGAYDANGKY.DataPropertyName = "NGAYDANGKY";
+            NGAYDANGKY.HeaderText = "NgayDK";
+            NGAYDANGKY.MinimumWidth = 8;
+            NGAYDANGKY.Name = "NGAYDANGKY";
+            NGAYDANGKY.Width = 113;
+            // 
+            // YEUCAUDACBIET
+            // 
+            YEUCAUDACBIET.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            YEUCAUDACBIET.DataPropertyName = "YEUCAUDACBIET";
+            YEUCAUDACBIET.HeaderText = "Chú Thích";
+            YEUCAUDACBIET.MinimumWidth = 8;
+            YEUCAUDACBIET.Name = "YEUCAUDACBIET";
+            YEUCAUDACBIET.Width = 300;
             // 
             // label4
             // 
@@ -97,17 +144,17 @@
             label4.Text = "Lịch sử dụng";
             label4.Click += label4_Click;
             // 
-            // dateTimePicker1
+            // thoigiansudung
             // 
-            dateTimePicker1.Location = new System.Drawing.Point(221, 82);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(300, 31);
-            dateTimePicker1.TabIndex = 22;
+            thoigiansudung.Location = new System.Drawing.Point(221, 122);
+            thoigiansudung.Name = "thoigiansudung";
+            thoigiansudung.Size = new System.Drawing.Size(300, 31);
+            thoigiansudung.TabIndex = 22;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(45, 33);
+            label1.Location = new System.Drawing.Point(45, 73);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(160, 25);
             label1.TabIndex = 23;
@@ -116,126 +163,90 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(45, 82);
+            label2.Location = new System.Drawing.Point(45, 122);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(156, 25);
             label2.TabIndex = 24;
             label2.Text = "Thời gian sử dụng";
             // 
-            // textBox1
+            // txt_SoNguoi
             // 
-            textBox1.Location = new System.Drawing.Point(221, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(150, 31);
-            textBox1.TabIndex = 25;
+            txt_SoNguoi.Location = new System.Drawing.Point(221, 73);
+            txt_SoNguoi.Name = "txt_SoNguoi";
+            txt_SoNguoi.Size = new System.Drawing.Size(150, 31);
+            txt_SoNguoi.TabIndex = 25;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(44, 136);
+            label3.Location = new System.Drawing.Point(44, 176);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(154, 25);
             label3.TabIndex = 26;
             label3.Text = "Chú thích đặc biệt";
             // 
-            // textBox2
+            // txt_ChuThich
             // 
-            textBox2.Location = new System.Drawing.Point(221, 136);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(300, 46);
-            textBox2.TabIndex = 27;
+            txt_ChuThich.Location = new System.Drawing.Point(221, 176);
+            txt_ChuThich.Multiline = true;
+            txt_ChuThich.Name = "txt_ChuThich";
+            txt_ChuThich.Size = new System.Drawing.Size(300, 46);
+            txt_ChuThich.TabIndex = 27;
             // 
-            // sttdv
+            // btn_TroVe
             // 
-            sttdv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            sttdv.HeaderText = "STT";
-            sttdv.MinimumWidth = 8;
-            sttdv.Name = "sttdv";
-            sttdv.Width = 76;
-            // 
-            // tendv
-            // 
-            tendv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            tendv.HeaderText = "Thời gian sử dụng";
-            tendv.MinimumWidth = 8;
-            tendv.Name = "tendv";
-            tendv.Width = 138;
-            // 
-            // soluong
-            // 
-            soluong.HeaderText = "Số người";
-            soluong.MinimumWidth = 8;
-            soluong.Name = "soluong";
-            soluong.Width = 150;
-            // 
-            // gia
-            // 
-            gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            gia.HeaderText = "NgayDK";
-            gia.MinimumWidth = 8;
-            gia.Name = "gia";
-            gia.Width = 113;
-            // 
-            // giamgia
-            // 
-            giamgia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            giamgia.HeaderText = "Chú Thích";
-            giamgia.MinimumWidth = 8;
-            giamgia.Name = "giamgia";
-            giamgia.Width = 116;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            Column1.HeaderText = "Chọn";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            Column1.Width = 90;
+            btn_TroVe.Location = new System.Drawing.Point(45, 12);
+            btn_TroVe.Name = "btn_TroVe";
+            btn_TroVe.Size = new System.Drawing.Size(112, 34);
+            btn_TroVe.TabIndex = 28;
+            btn_TroVe.Text = "Trở về";
+            btn_TroVe.UseVisualStyleBackColor = true;
+            btn_TroVe.Click += btn_TroVe_Clicked;
             // 
             // LichSudungDVControl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1039, 553);
-            Controls.Add(textBox2);
+            ClientSize = new System.Drawing.Size(1119, 553);
+            Controls.Add(btn_TroVe);
+            Controls.Add(txt_ChuThich);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(txt_SoNguoi);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(dataGridView1);
+            Controls.Add(thoigiansudung);
+            Controls.Add(btn_Sua);
+            Controls.Add(btn_Xoa);
+            Controls.Add(btn_Them);
+            Controls.Add(gv_LichSuDung);
             Controls.Add(label4);
             Name = "LichSudungDVControl";
             Text = "LichSudungDVControl";
             Load += LichSudungDVControl_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gv_LichSuDung).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Sua;
+        private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gv_LichSuDung;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sttdv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tendv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giamgia;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker thoigiansudung;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_SoNguoi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_ChuThich;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_TroVe;
+        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sttdv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TGSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONGTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYDANGKY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn YEUCAUDACBIET;
     }
 }

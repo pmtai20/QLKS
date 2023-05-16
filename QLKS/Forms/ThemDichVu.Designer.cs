@@ -29,27 +29,32 @@
         private void InitializeComponent()
         {
             label1 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
-            button6 = new System.Windows.Forms.Button();
-            textBox4 = new System.Windows.Forms.TextBox();
+            txt_TenDV = new System.Windows.Forms.TextBox();
+            btn_Tim = new System.Windows.Forms.Button();
+            btn_XacNhan = new System.Windows.Forms.Button();
+            txt_TongTien = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
-            sttdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            giamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label4 = new System.Windows.Forms.Label();
-            dataGridView2 = new System.Windows.Forms.DataGridView();
-            button2 = new System.Windows.Forms.Button();
-            dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            listView1 = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            gv_KQTimDV = new System.Windows.Forms.DataGridView();
+            stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            GIASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            btn_Them = new System.Windows.Forms.Button();
+            btn_Tro_Ve = new System.Windows.Forms.Button();
+            btn_Xoa = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            cbb_NguoiDK = new System.Windows.Forms.ComboBox();
+            gv_DichVuDaThem = new System.Windows.Forms.DataGridView();
+            sttdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            GIATHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            giamgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TENNGUOIDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)gv_KQTimDV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gv_DichVuDaThem).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -57,42 +62,43 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(29, 48);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(147, 25);
+            label1.Size = new System.Drawing.Size(0, 25);
             label1.TabIndex = 0;
-            label1.Text = "Nhập tên dịch vụ";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // txt_TenDV
             // 
-            textBox1.Location = new System.Drawing.Point(195, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(150, 31);
-            textBox1.TabIndex = 1;
+            txt_TenDV.Location = new System.Drawing.Point(195, 48);
+            txt_TenDV.Name = "txt_TenDV";
+            txt_TenDV.Size = new System.Drawing.Size(150, 31);
+            txt_TenDV.TabIndex = 1;
             // 
-            // button1
+            // btn_Tim
             // 
-            button1.Location = new System.Drawing.Point(367, 45);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(112, 34);
-            button1.TabIndex = 2;
-            button1.Text = "Tìm";
-            button1.UseVisualStyleBackColor = true;
+            btn_Tim.Location = new System.Drawing.Point(367, 45);
+            btn_Tim.Name = "btn_Tim";
+            btn_Tim.Size = new System.Drawing.Size(112, 34);
+            btn_Tim.TabIndex = 2;
+            btn_Tim.Text = "Tìm";
+            btn_Tim.UseVisualStyleBackColor = true;
+            btn_Tim.Click += btn_Tim_Clicked;
             // 
-            // button6
+            // btn_XacNhan
             // 
-            button6.Location = new System.Drawing.Point(666, 626);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(112, 34);
-            button6.TabIndex = 23;
-            button6.Text = "Xác nhận";
-            button6.UseVisualStyleBackColor = true;
+            btn_XacNhan.Location = new System.Drawing.Point(303, 579);
+            btn_XacNhan.Name = "btn_XacNhan";
+            btn_XacNhan.Size = new System.Drawing.Size(112, 34);
+            btn_XacNhan.TabIndex = 23;
+            btn_XacNhan.Text = "Xác nhận";
+            btn_XacNhan.UseVisualStyleBackColor = true;
+            btn_XacNhan.Click += btn_XacNhan_Click;
             // 
-            // textBox4
+            // txt_TongTien
             // 
-            textBox4.Location = new System.Drawing.Point(613, 573);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(229, 31);
-            textBox4.TabIndex = 22;
+            txt_TongTien.Location = new System.Drawing.Point(613, 573);
+            txt_TongTien.Name = "txt_TongTien";
+            txt_TongTien.Size = new System.Drawing.Size(229, 31);
+            txt_TongTien.TabIndex = 22;
             // 
             // label5
             // 
@@ -102,52 +108,6 @@
             label5.Size = new System.Drawing.Size(87, 25);
             label5.TabIndex = 21;
             label5.Text = "Tổng tiền";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { sttdv, tendv, soluong, gia, giamgia });
-            dataGridView1.Location = new System.Drawing.Point(29, 319);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new System.Drawing.Size(813, 248);
-            dataGridView1.TabIndex = 20;
-            // 
-            // sttdv
-            // 
-            sttdv.HeaderText = "STT";
-            sttdv.MinimumWidth = 8;
-            sttdv.Name = "sttdv";
-            sttdv.Width = 150;
-            // 
-            // tendv
-            // 
-            tendv.HeaderText = "Tên dịch vụ";
-            tendv.MinimumWidth = 8;
-            tendv.Name = "tendv";
-            tendv.Width = 150;
-            // 
-            // soluong
-            // 
-            soluong.HeaderText = "SL";
-            soluong.MinimumWidth = 8;
-            soluong.Name = "soluong";
-            soluong.Width = 150;
-            // 
-            // gia
-            // 
-            gia.HeaderText = "Giá tiền";
-            gia.MinimumWidth = 8;
-            gia.Name = "gia";
-            gia.Width = 150;
-            // 
-            // giamgia
-            // 
-            giamgia.HeaderText = "Giảm giá";
-            giamgia.MinimumWidth = 8;
-            giamgia.Name = "giamgia";
-            giamgia.Width = 150;
             // 
             // label4
             // 
@@ -159,82 +119,188 @@
             label4.Text = "Thông tin dịch vụ đã thêm";
             label4.Click += label4_Click;
             // 
-            // dataGridView2
+            // gv_KQTimDV
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn4, Column1 });
-            dataGridView2.Location = new System.Drawing.Point(29, 99);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.RowTemplate.Height = 33;
-            dataGridView2.Size = new System.Drawing.Size(608, 178);
-            dataGridView2.TabIndex = 24;
+            gv_KQTimDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gv_KQTimDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { stt, TENSP, GIASP, check });
+            gv_KQTimDV.Location = new System.Drawing.Point(29, 99);
+            gv_KQTimDV.Name = "gv_KQTimDV";
+            gv_KQTimDV.RowHeadersWidth = 62;
+            gv_KQTimDV.RowTemplate.Height = 33;
+            gv_KQTimDV.Size = new System.Drawing.Size(638, 178);
+            gv_KQTimDV.TabIndex = 24;
             // 
-            // button2
+            // stt
             // 
-            button2.Location = new System.Drawing.Point(870, 171);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(73, 34);
-            button2.TabIndex = 25;
-            button2.Text = "Thêm";
-            button2.UseVisualStyleBackColor = true;
+            stt.HeaderText = "STT";
+            stt.MinimumWidth = 8;
+            stt.Name = "stt";
+            stt.Width = 75;
             // 
-            // dataGridViewTextBoxColumn1
+            // TENSP
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "STT";
-            dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 75;
+            TENSP.DataPropertyName = "TENSP";
+            TENSP.HeaderText = "Tên dịch vụ";
+            TENSP.MinimumWidth = 8;
+            TENSP.Name = "TENSP";
+            TENSP.Width = 275;
             // 
-            // dataGridViewTextBoxColumn2
+            // GIASP
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Tên dịch vụ";
-            dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 275;
+            GIASP.DataPropertyName = "GIASP";
+            GIASP.HeaderText = "Giá tiền";
+            GIASP.MinimumWidth = 8;
+            GIASP.Name = "GIASP";
+            GIASP.Width = 125;
             // 
-            // dataGridViewTextBoxColumn4
+            // check
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Giá tiền";
-            dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 125;
+            check.DataPropertyName = "check";
+            check.HeaderText = "Chọn";
+            check.MinimumWidth = 8;
+            check.Name = "check";
+            check.Width = 75;
             // 
-            // Column1
+            // btn_Them
             // 
-            Column1.HeaderText = "Chọn";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            Column1.Width = 75;
+            btn_Them.Location = new System.Drawing.Point(676, 243);
+            btn_Them.Name = "btn_Them";
+            btn_Them.Size = new System.Drawing.Size(73, 34);
+            btn_Them.TabIndex = 25;
+            btn_Them.Text = "Thêm";
+            btn_Them.UseVisualStyleBackColor = true;
+            btn_Them.Click += btn_Them_Clicked;
             // 
-            // listView1
+            // btn_Tro_Ve
             // 
-            listView1.Location = new System.Drawing.Point(643, 95);
-            listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(199, 182);
-            listView1.TabIndex = 26;
-            listView1.UseCompatibleStateImageBehavior = false;
+            btn_Tro_Ve.Location = new System.Drawing.Point(29, 11);
+            btn_Tro_Ve.Name = "btn_Tro_Ve";
+            btn_Tro_Ve.Size = new System.Drawing.Size(112, 34);
+            btn_Tro_Ve.TabIndex = 26;
+            btn_Tro_Ve.Text = "Trở Về";
+            btn_Tro_Ve.UseVisualStyleBackColor = true;
+            btn_Tro_Ve.Click += btn_TroVe_Clicked;
+            // 
+            // btn_Xoa
+            // 
+            btn_Xoa.Location = new System.Drawing.Point(29, 579);
+            btn_Xoa.Name = "btn_Xoa";
+            btn_Xoa.Size = new System.Drawing.Size(244, 34);
+            btn_Xoa.TabIndex = 27;
+            btn_Xoa.Text = "Xóa Dịch Vụ Đã chọn";
+            btn_Xoa.UseVisualStyleBackColor = true;
+            btn_Xoa.Click += btn_Xoa_Clicked;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(520, 48);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(133, 25);
+            label2.TabIndex = 28;
+            label2.Text = "Người Đăng Ký";
+            // 
+            // cbb_NguoiDK
+            // 
+            cbb_NguoiDK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbb_NguoiDK.FormattingEnabled = true;
+            cbb_NguoiDK.Location = new System.Drawing.Point(666, 45);
+            cbb_NguoiDK.Name = "cbb_NguoiDK";
+            cbb_NguoiDK.Size = new System.Drawing.Size(182, 33);
+            cbb_NguoiDK.TabIndex = 29;
+            // 
+            // gv_DichVuDaThem
+            // 
+            gv_DichVuDaThem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gv_DichVuDaThem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { sttdv, TENDV, soluong, GIATHANH, giamgia, TENNGUOIDK, checkbox });
+            gv_DichVuDaThem.Location = new System.Drawing.Point(22, 308);
+            gv_DichVuDaThem.Name = "gv_DichVuDaThem";
+            gv_DichVuDaThem.RowHeadersWidth = 62;
+            gv_DichVuDaThem.RowTemplate.Height = 33;
+            gv_DichVuDaThem.Size = new System.Drawing.Size(984, 248);
+            gv_DichVuDaThem.TabIndex = 43;
+            gv_DichVuDaThem.CellValueChanged += gv_DVDT_CellValueChanged;
+            // 
+            // sttdv
+            // 
+            sttdv.DataPropertyName = "STTDV";
+            sttdv.HeaderText = "STT";
+            sttdv.MinimumWidth = 8;
+            sttdv.Name = "sttdv";
+            sttdv.Width = 150;
+            // 
+            // TENDV
+            // 
+            TENDV.DataPropertyName = "TENDV";
+            TENDV.HeaderText = "Tên dịch vụ";
+            TENDV.MinimumWidth = 8;
+            TENDV.Name = "TENDV";
+            TENDV.Width = 150;
+            // 
+            // soluong
+            // 
+            soluong.DataPropertyName = "SOLUONG";
+            soluong.HeaderText = "SL";
+            soluong.MinimumWidth = 8;
+            soluong.Name = "soluong";
+            soluong.Width = 75;
+            // 
+            // GIATHANH
+            // 
+            GIATHANH.DataPropertyName = "GIATHANH";
+            GIATHANH.HeaderText = "Giá tiền";
+            GIATHANH.MinimumWidth = 8;
+            GIATHANH.Name = "GIATHANH";
+            GIATHANH.Width = 150;
+            // 
+            // giamgia
+            // 
+            giamgia.DataPropertyName = "GIAMGIA";
+            giamgia.HeaderText = "Giảm giá";
+            giamgia.MinimumWidth = 8;
+            giamgia.Name = "giamgia";
+            giamgia.Width = 125;
+            // 
+            // TENNGUOIDK
+            // 
+            TENNGUOIDK.DataPropertyName = "TENNGUOIDK";
+            TENNGUOIDK.FillWeight = 225F;
+            TENNGUOIDK.HeaderText = "Người ĐK";
+            TENNGUOIDK.MinimumWidth = 8;
+            TENNGUOIDK.Name = "TENNGUOIDK";
+            TENNGUOIDK.Width = 200;
+            // 
+            // checkbox
+            // 
+            checkbox.HeaderText = "Chọn";
+            checkbox.MinimumWidth = 8;
+            checkbox.Name = "checkbox";
+            checkbox.Width = 75;
             // 
             // ThemDichVu
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(977, 672);
-            Controls.Add(listView1);
-            Controls.Add(button2);
-            Controls.Add(dataGridView2);
-            Controls.Add(button6);
-            Controls.Add(textBox4);
+            ClientSize = new System.Drawing.Size(1018, 672);
+            Controls.Add(gv_DichVuDaThem);
+            Controls.Add(cbb_NguoiDK);
+            Controls.Add(label2);
+            Controls.Add(btn_Xoa);
+            Controls.Add(btn_Tro_Ve);
+            Controls.Add(btn_Them);
+            Controls.Add(gv_KQTimDV);
+            Controls.Add(btn_XacNhan);
+            Controls.Add(txt_TongTien);
             Controls.Add(label5);
-            Controls.Add(dataGridView1);
             Controls.Add(label4);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(btn_Tim);
+            Controls.Add(txt_TenDV);
             Controls.Add(label1);
             Name = "ThemDichVu";
             Text = "ThemDichVu";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            Load += ThemDichVu_Load;
+            ((System.ComponentModel.ISupportInitialize)gv_KQTimDV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gv_DichVuDaThem).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -242,24 +308,31 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_TenDV;
+        private System.Windows.Forms.Button btn_Tim;
+        private System.Windows.Forms.Button btn_XacNhan;
+        private System.Windows.Forms.TextBox txt_TongTien;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sttdv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tendv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giamgia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DataGridView gv_KQTimDV;
+        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Button btn_Tro_Ve;
+        private System.Windows.Forms.Button btn_Xoa;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbb_NguoiDK;
+        private System.Windows.Forms.DataGridView gv_DichVuDaThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIASP;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sttdv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIATHANH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giamgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENNGUOIDK;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
     }
 }
