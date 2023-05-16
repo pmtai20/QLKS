@@ -27,7 +27,7 @@ namespace QLKS.UserControls
         public void LoadData()
         {
             // Query the Rooms table and store the results in a DataTable
-            string query = "SELECT MADP, TENKH, NGAYNHAN, NGAYTRA, NGAYDATPHONG, LOAIPHONG, TRANGTHAI FROM DATPHONG JOIN KHACHHANG ON DATPHONG.MAKH = KHACHHANG.MAKH";
+            string query = "SELECT MADP,KHCN.TENKHCN, NGAYNHAN, NGAYTRA, NGAYDATPHONG, LOAIPHONG, TRANGTHAI FROM DATPHONG JOIN KHACHHANG ON DATPHONG.MAKH = KHACHHANG.MAKH JOIN KHACHHANGCANHAN KHCN ON KHACHHANG.MAKH=KHCN.MAKHCN ";
             DataTable dataTable = DataAccess.ExecuteQuery(query);
 
             // Bind the DataTable to the DataGridView

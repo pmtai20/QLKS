@@ -39,8 +39,15 @@ namespace QLKS
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    using SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                    dataAdapter.Fill(dataTable);
+                    try
+                    {
+                        using SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        dataAdapter.Fill(dataTable);
+                    }
+                    catch (Exception ex)
+                    {
+                        int i = 0;
+                    }
                 }
 
                 connection.Close();

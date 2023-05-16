@@ -34,17 +34,17 @@ namespace QLKS.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            dvgDSPT = new System.Windows.Forms.DataGridView();
-            panel1 = new System.Windows.Forms.Panel();
-            label1 = new System.Windows.Forms.Label();
-            panel2 = new System.Windows.Forms.Panel();
-            btnDSPT_TimKiem = new System.Windows.Forms.Button();
-            cbxDSPT_LoaiPhong = new System.Windows.Forms.ComboBox();
-            label4 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            dtDSPT_Date = new System.Windows.Forms.DateTimePicker();
-            label2 = new System.Windows.Forms.Label();
-            btnDSPT_DatPhong = new System.Windows.Forms.Button();
+            dvgDSPT = new DataGridView();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            btnDSPT_TimKiem = new Button();
+            cbxDSPT_LoaiPhong = new ComboBox();
+            label4 = new Label();
+            label3 = new Label();
+            dtDSPT_Date = new DateTimePicker();
+            label2 = new Label();
+            btnDSPT_DatPhong = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgDSPT).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -54,58 +54,63 @@ namespace QLKS.UserControls
             // 
             dvgDSPT.AllowUserToAddRows = false;
             dvgDSPT.AllowUserToDeleteRows = false;
-            dvgDSPT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dvgDSPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgDSPT.Location = new System.Drawing.Point(4, 53);
-            dvgDSPT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dvgDSPT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dvgDSPT.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgDSPT.Location = new Point(11, 94);
+            dvgDSPT.Margin = new Padding(4, 3, 4, 3);
             dvgDSPT.Name = "dvgDSPT";
             dvgDSPT.ReadOnly = true;
             dvgDSPT.RowHeadersVisible = false;
             dvgDSPT.RowHeadersWidth = 51;
             dvgDSPT.RowTemplate.Height = 29;
-            dvgDSPT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            dvgDSPT.Size = new System.Drawing.Size(674, 592);
+            dvgDSPT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dvgDSPT.Size = new Size(963, 300);
             dvgDSPT.TabIndex = 4;
             // 
             // panel1
             // 
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(dvgDSPT);
-            panel1.Location = new System.Drawing.Point(20, 20);
+            panel1.Location = new Point(45, 156);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(683, 652);
+            panel1.Size = new Size(1041, 420);
             panel1.TabIndex = 5;
+            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(3, 20);
+            label1.Font = new Font("Segoe UI", 17F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(-1, 10);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(266, 31);
+            label1.Size = new Size(394, 46);
             label1.TabIndex = 5;
             label1.Text = "Danh sách phòng trống";
+            label1.Click += label1_Click;
             // 
             // panel2
             // 
-            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(btnDSPT_TimKiem);
+            panel2.Controls.Add(dtDSPT_Date);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(cbxDSPT_LoaiPhong);
             panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(dtDSPT_Date);
-            panel2.Controls.Add(label2);
-            panel2.Location = new System.Drawing.Point(729, 213);
+            panel2.Location = new Point(44, 70);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(295, 180);
+            panel2.Size = new Size(1042, 59);
             panel2.TabIndex = 6;
             // 
             // btnDSPT_TimKiem
             // 
-            btnDSPT_TimKiem.Location = new System.Drawing.Point(187, 123);
+            btnDSPT_TimKiem.Location = new Point(795, 5);
+            btnDSPT_TimKiem.Margin = new Padding(4, 5, 4, 5);
             btnDSPT_TimKiem.Name = "btnDSPT_TimKiem";
-            btnDSPT_TimKiem.Size = new System.Drawing.Size(88, 28);
+            btnDSPT_TimKiem.Size = new Size(126, 47);
             btnDSPT_TimKiem.TabIndex = 11;
             btnDSPT_TimKiem.Text = "Tìm kiếm";
             btnDSPT_TimKiem.UseVisualStyleBackColor = true;
@@ -114,68 +119,75 @@ namespace QLKS.UserControls
             // 
             cbxDSPT_LoaiPhong.FormattingEnabled = true;
             cbxDSPT_LoaiPhong.Items.AddRange(new object[] { "Standard", "Deluxe" });
-            cbxDSPT_LoaiPhong.Location = new System.Drawing.Point(21, 127);
+            cbxDSPT_LoaiPhong.Location = new Point(612, 13);
+            cbxDSPT_LoaiPhong.Margin = new Padding(4, 5, 4, 5);
             cbxDSPT_LoaiPhong.Name = "cbxDSPT_LoaiPhong";
-            cbxDSPT_LoaiPhong.Size = new System.Drawing.Size(109, 23);
+            cbxDSPT_LoaiPhong.Size = new Size(154, 33);
             cbxDSPT_LoaiPhong.TabIndex = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(21, 109);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(487, 13);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(67, 15);
+            label4.Size = new Size(102, 25);
             label4.TabIndex = 9;
             label4.Text = "Loại phòng";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(21, 50);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(17, 13);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(35, 15);
+            label3.Size = new Size(54, 25);
             label3.TabIndex = 8;
             label3.Text = "Ngày";
             // 
             // dtDSPT_Date
             // 
-            dtDSPT_Date.Location = new System.Drawing.Point(21, 68);
+            dtDSPT_Date.Location = new Point(79, 13);
+            dtDSPT_Date.Margin = new Padding(4, 5, 4, 5);
             dtDSPT_Date.Name = "dtDSPT_Date";
-            dtDSPT_Date.Size = new System.Drawing.Size(254, 23);
+            dtDSPT_Date.Size = new Size(361, 31);
             dtDSPT_Date.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(3, 6);
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(36, 30);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(100, 28);
+            label2.Size = new Size(149, 41);
             label2.TabIndex = 6;
             label2.Text = "Tìm kiếm";
             // 
             // btnDSPT_DatPhong
             // 
-            btnDSPT_DatPhong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnDSPT_DatPhong.Location = new System.Drawing.Point(917, 427);
+            btnDSPT_DatPhong.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDSPT_DatPhong.Location = new Point(1310, 712);
+            btnDSPT_DatPhong.Margin = new Padding(4, 5, 4, 5);
             btnDSPT_DatPhong.Name = "btnDSPT_DatPhong";
-            btnDSPT_DatPhong.Size = new System.Drawing.Size(107, 32);
+            btnDSPT_DatPhong.Size = new Size(153, 53);
             btnDSPT_DatPhong.TabIndex = 7;
             btnDSPT_DatPhong.Text = "Đặt phòng";
             btnDSPT_DatPhong.UseVisualStyleBackColor = true;
             // 
             // DatPhongControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnDSPT_DatPhong);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Controls.Add(label2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "DatPhongControl";
-            Size = new System.Drawing.Size(1055, 692);
+            Size = new Size(1507, 643);
             Load += DatPhongControl_Load;
             Click += DatPhongControl_Load;
             ((System.ComponentModel.ISupportInitialize)dvgDSPT).EndInit();
@@ -184,6 +196,7 @@ namespace QLKS.UserControls
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
